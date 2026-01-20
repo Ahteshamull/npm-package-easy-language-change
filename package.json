@@ -1,0 +1,33 @@
+{
+  "name": "easy-language-change",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Professional, lightweight, multi-language support for websites with Tailwind CSS ready modals and toasts.",
+  "main": "dist/easy-language-change.cjs.js",
+  "module": "dist/easy-language-change.esm.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "i18n",
+    "multi-language",
+    "modal",
+    "toast",
+    "tailwind",
+    "UI",
+    "vanilla-js"
+  ],
+  "author": "Hasan",
+  "license": "MIT | Ahteshamul Hasan",
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^3.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.3.0"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  }
+}
