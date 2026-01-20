@@ -28,6 +28,6 @@
     "@rollup/plugin-terser": "^0.3.0"
   },
   "scripts": {
-    "build": "rollup -c"
+    "build": "node api.js && rollup -c"
   }
 }
