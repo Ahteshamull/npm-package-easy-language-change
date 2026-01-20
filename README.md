@@ -28,6 +28,48 @@ npm install tailwindcss
 ## Quick Start
 
 ```javascript
+import { translations, setLanguage, showModal } from "easy-language-change";
+
+// Define translations
+translations.en = {
+  delete_title: "Delete Item?",
+  delete_content: "Are you sure?",
+  cancel: "Cancel",
+  yes: "Yes",
+};
+translations.bn = {
+  delete_title: "আইটেম মুছবেন?",
+  delete_content: "আপনি কি নিশ্চিত?",
+  cancel: "বাতিল",
+  yes: "হ্যাঁ",
+};
+translations.fr = {
+  delete_title: "Supprimer l'élément?",
+  delete_content: "Êtes-vous sûr?",
+  cancel: "Annuler",
+  yes: "Oui",
+};
+
+// Set language globally
+setLanguage("en"); // or "bn" or "fr"
+
+// Show modal
+async function confirmDelete() {
+  const result = await showModal({
+    titleKey: "delete_title",
+    contentKey: "delete_content",
+    buttonsKeys: ["cancel", "yes"],
+  });
+
+  console.log(result); // Returns button key clicked
+}
+
+confirmDelete();
+```
+
+## Basic Usage
+
+```javascript
 import { setLanguage, t, showModal, showToast } from "easy-language-change";
 
 // Add translations
